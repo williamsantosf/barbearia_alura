@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head><!--informações a serem passadas ao navegador-->
+		<meta charset="UTF-8"><!--dicionário da página-->
+		<title>Contato - Barbearia Alura</title><!--título da aba do navegador-->
+		<link rel="stylesheet" href="reset.css"> <!--reseta as configurações padrões do navegador, carregada antes do CSS-->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<div class="caixa"><!--div para envelopar o cabeçalho inteiro, imagem e mais menu-->
+				<h1><img src="logo.png"></h1><!--a imagem é o ítem de maior importância da página-->
+				<nav> <!--tag semântica para menus de navegação-->
+					<ul>
+						<li><a href="index.html">Home</a></li><!--tag a âncora, para colocar os links-->
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<form> <!--Tag para início do formulário-->
+				<label for="nomesobrenome">Nome e Sobrenome</label><!--Etiqueta do campo do formulário-->
+				<input type="text" id="nomesobrenome" class="input-padrao"><!--Toda label tem que vir acompanhada de um input, que deve ter tipo e um id (que será a ligação com o back end)-->
+
+				<label for="email">Email</label>
+				<input type="text" id="email" class="input-padrao">
+
+				<label for="telefone">Telefone</label>
+				<input type="text" id="telefone" class="input-padrao">
+
+				<label for="mensagem">Mensagem:</label>
+				<textarea cols="70" rows="10" id="mensagem" class="input-padrao"></textarea>
+
+				<div> <!--Criamos uma div para envelopar todo o formulário-->
+					<p>Como prefere nosso contato?</p>
+					<label for="radio-email"><input type="radio" value="radio-email" id="radio-email"  name="contato">
+					<!--tipo radio, id deve ser igual ao for para eles se conversarem, name para agrupar os radios (para permitir que somente um seja marcado-->E-mail</label>
+					
+					<label for="radio-telefone"><input type="radio" value="telefone" id="radio-telefone" name="contato">Telefone</label>
+					
+					<label for="radio-whatsapp"><input type="radio" value="whatsapp" id="radio-whatsapp" name="contato">WhatsApp</label>		
+				</div>
+				<div>
+				<p>Qual horário prefere ser atendido?</p>
+				<select>
+					<option>Manhã</option>
+					<option>Tarde</option>
+					<option>Noite</option>
+				</select>
+				</div>
+
+				<label class="checkbox"><input type="checkbox">Gostaria de receber nossas novidades por e-mail?</label>
+
+				<input type="submit" value="Enviar Formulário"><!--Para envio de formulário, não necessita de label-->
+			</form>
+		</main>
+		<footer>
+			<img src="logo-branco.png">
+			<p class="copy">&copy; Copyright Barbearia Alura - 2019</p>
+		</footer>
+	</body>
+</html>

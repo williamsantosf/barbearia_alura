@@ -1,0 +1,161 @@
+header {
+	background: #BBBBBB; /*cor cinza em hexadecimal, sistema rgb*/
+	padding: 20px 0;     /*20px em cima e em baixode espaçamento interno*/ 
+}
+
+.caixa { /*classe que manibpula todo o cabeçalho, a div com os menus de navegãção*/
+	position: relative; /*coloca a caixa com uma posição relativa à pagina como um todo*/
+	width: 940px; /*largura padrão para a web*/
+	margin: 0 auto; /*faz com que as margens se calculem sozinhas (dos lados) de acordo com a tela do dispositivo*/
+}
+
+nav {
+	position: absolute; /*posiciona o elemento com relação absluta à página inteira (ou à outro elemento)*/
+	top: 110px; /*distância com relação ao canto superior da página*/
+	right: 0; /*zera a margem direita*/
+}
+
+
+nav li {
+	display: inline; /*coloca os itens da lista lado a lado*/
+	margin: 0 0 0 15px; /*espaçamento externo:  topo, direita, baixo, esquerda*/
+}
+
+nav a {
+	text-transform: uppercase; /*coloca os links em maiúsculo*/
+	color: #000000; /*cor preta em hexadecimal sistena rgb*/
+	font-weight: bold; /*tecte em negrito*/
+	font-size: 22px; /*tamanho da fonte*/
+	text-decoration: none; /*elimina o sblinhado do link*/
+}
+
+nav a:hover { /*ação de passar o mouse sobre esse elemnto com hover*/
+	color:#C78C19;
+	text-decoration: underline;
+}
+
+.produtos {
+	width: 940px; /* largufa fixa da lista de pordutos, largura padrão da wev*/
+	margin: 0 auto; /* calcula as margens automaticamente oara os lados e zerado em cima e em baico**/
+	padding: 50px 0; /*aumenta o espaçamento interno, para afastar do cabeçalho, sem mexer na posição externa*/
+}
+
+.produtos li {                /*classe seguida do elemento a ser manipulado*/
+	display: inline-block;    /*para deixar os elementos alinhados ladoa lado*/
+	text-align: center;       /*alinha o texto dos elementos ao centro*/
+	width: 30%;				  /* divide os elementos em 1/3 do cumprimento total*/
+	vertical-align: top;      /* alinha os elementos pela linha d ecima*/
+	margin: 0 1.5%;			  /*espaçamento externo para separar os itens*/	
+	padding: 30px 20px;		  /*espaçamento interno*/
+	box-sizing: border-box;	  /*anula a soma dos espaçamentos(internos e externos)*/
+	/*border-color: #000000;
+	border-width: 2px;
+	border-style: solid;*/
+	border: 2px solid #000000; /*declaração unificada de borda, substitui as tres anteriores*/
+	border-radius: 10px;
+}
+
+.produtos li:hover { /*ção quando passar o mouse sobre o elemento*/
+	border-color: #C78C19;
+}
+
+.produtos li:active{ /*ação ao segurar o botão do mouse sobre o elemento*/
+	border-color: #088C19;
+}
+
+.produtos li:hover h2 { /*para alterar o valor da fonte do elemento ao passra o mouse. deve ser feito dessa maneiro pois já foram estabelecidos valor para as fontes.*/
+	font-size: 34px;
+	color: #C78C19;
+}
+
+
+.produtos h2 { /*classe e item que se quer manipular*/
+	font-size: 30px; /*formata título dos procutos*/
+	font-weight: bold; /*deixa o título dos produtos em negrito*/
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+}
+
+
+.copy {
+	color: #FFFFFF;
+	font-size: 13px;
+}
+
+main { /*para centralizar todo o conteúdo dentro de main*/
+	width: 940px; /*largura padrão da web*/
+	margin: 0 auto; /*zerada em cima e embaixo e automática para os lados*/
+}
+
+form { /*margem do formulário todo (para desgrudar ele do header e do rodapé*/
+	margin: 40px 0; 
+}
+
+form label, p { 
+	display: block; /*os elementos do form são in line por padrão, ajustar para block para ficar um em cada linha*/
+	font-size: 20px;
+	margin: 0 0 10px ; /*margens das etiquetas para desgrudar da caixa de inpur*/
+}
+
+.input-padrao { /*criamos essa classe para TIRAR essas configurações dos inputs radio*/
+	display: block; /* coloca em linhas separadas*/
+	margin: 0 0 20px; /*afasta as caixinhas da label abaixo*/
+	padding: 10px 25px; /*aumenta o tamanho do campo*/
+	width: 50%; /*aumenta a largura do campo*/
+}
+
+.checkbox {
+margin: 20px 0;
+}
+
+/*
+---------------PRECEDÊNCIA  DE SELETORES, IDENTIFICADORES, CLASSES E INLINE----------------
+Quanto mais específica for a seleção, mais prioridade ela terá: 
+Exemplo d equal cor será aplicada à tag parágrafo, se acordo com sua declaração: ;
+[FORÇA 1 TAG] - A cor aplicada na tag <p> será o vermelho
+		 p {
+			color red;
+		}
+********************************************************************************************
+[FORÇA 2 TAG + TAG] - A cor aplicada será o azul, pois concatenamos as tags form + p (1+1)
+	form p {
+		color:  blue;
+	}
+********************************************************************************************
+[FORÇA 10 CLASSE] - A cor aplicada será o yellow, pois a classe tem peso 10
+.class {
+	color:  yellow;
+}
+********************************************************************************************
+[FORÇA 11 CLASSE +  TAG] - A cor aplicada será laranja, pois a classe tem peso 10 e a tag 1.
+p.class {
+	color: organge;
+}
+********************************************************************************************
+[FORÇA 100 IDENTIFICADOR] - A cor aplicada será o rosa, pois o identificador é mais 
+específico e tem amior precedência.
+#identificador {
+	color: pink;
+}
+********************************************************************************************
+[FORÇA 1000 INLINE] - A cor aplicada será verde, a declaração da propriedade inline tem a precência máxima.
+	<p style="color: green" (no elemento HTML)
+********************************************************************************************
+*/
+
+/*alteração para commit*/
+/**********************/
