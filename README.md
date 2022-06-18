@@ -1,2 +1,1 @@
-#projeto_barbearia_alura
-# barbearia_alura
+Minha evolução em HTML e CSS num proijeto prático através da plataforma Alura.
