@@ -22,16 +22,16 @@
 		<main>
 			<form> <!--Tag para início do formulário-->
 				<label for="nomesobrenome">Nome e Sobrenome</label><!--Etiqueta do campo do formulário-->
-				<input type="text" id="nomesobrenome" class="input-padrao"><!--Toda label tem que vir acompanhada de um input, que deve ter tipo e um id (que será a ligação com o back end)-->
+				<input type="text" id="nomesobrenome" class="input-padrao" required><!--Toda label tem que vir acompanhada de um input, que deve ter tipo e um id (que será a ligação com o back end)-->
 
 				<label for="email">Email</label>
-				<input type="text" id="email" class="input-padrao">
+				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com"><!--Tipo do campo alterado para e-mail, acessibilidade-->
 
 				<label for="telefone">Telefone</label>
-				<input type="text" id="telefone" class="input-padrao">
+				<input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX"><!--tipo telefne, alterado para tel, acessibilidade-->
 
 				<label for="mensagem">Mensagem:</label>
-				<textarea cols="70" rows="10" id="mensagem" class="input-padrao"></textarea>
+				<textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
 
 				<div> <!--Criamos uma div para envelopar todo o formulário-->
 					<p>Como prefere nosso contato?</p>
@@ -40,7 +40,7 @@
 					
 					<label for="radio-telefone"><input type="radio" value="telefone" id="radio-telefone" name="contato">Telefone</label>
 					
-					<label for="radio-whatsapp"><input type="radio" value="whatsapp" id="radio-whatsapp" name="contato">WhatsApp</label>		
+					<label for="radio-whatsapp"><input type="radio" value="whatsapp" id="radio-whatsapp" name="contato" checked>WhatsApp</label>		
 				</div>
 				<div>
 				<p>Qual horário prefere ser atendido?</p>
@@ -51,7 +51,7 @@
 				</select>
 				</div>
 
-				<label class="checkbox"><input type="checkbox">Gostaria de receber nossas novidades por e-mail?</label>
+				<label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por e-mail?</label>
 
 				<input type="submit" value="Enviar Formulário"><!--Para envio de formulário, não necessita de label-->
 			</form>
