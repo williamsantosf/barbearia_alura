@@ -105,7 +105,7 @@ form { /*margem do formulário todo (para desgrudar ele do header e do rodapé*/
 	margin: 40px 0; 
 }
 
-form label, p { 
+form label, legend { 
 	display: block; /*os elementos do form são in line por padrão, ajustar para block para ficar um em cada linha*/
 	font-size: 20px;
 	margin: 0 0 10px ; /*margens das etiquetas para desgrudar da caixa de inpur*/
@@ -156,6 +156,3 @@ específico e tem amior precedência.
 	<p style="color: green" (no elemento HTML)
 ********************************************************************************************
 */
-
-/*alteração para commit*/
-/**********************/
