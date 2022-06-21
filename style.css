@@ -122,6 +122,27 @@ form label, legend { /*alterada a tag de p para legend*/
 margin: 20px 0;
 }
 
+.enviar {
+	width: 40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all; /*velocidade de transição do elemento, do normal para as características descritas na class*/
+	cursor: pointer; /*transforma cursor na mãozinha*/
+}
+
+.enviar:hover {
+	background: red;
+	transform: scale(1.2); /*propridade que aumenta a proporção do item quando clicado, em decimal nesse caso aumenta em 20%*/
+}
+
+
+
+
 /*
 ---------------PRECEDÊNCIA  DE SELETORES, IDENTIFICADORES, CLASSES E INLINE----------------
 Quanto mais específica for a seleção, mais prioridade ela terá: 
