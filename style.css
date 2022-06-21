@@ -123,7 +123,7 @@ margin: 20px 0;
 }
 
 .enviar {
-	width: 40%;
+	width: 30%;
 	padding: 15px 0;
 	background: orange;
 	color: white;
@@ -131,7 +131,7 @@ margin: 20px 0;
 	font-size: 18px;
 	border: none;
 	border-radius: 5px;
-	transition: 1s all; /*velocidade de transição do elemento, do normal para as características descritas na class*/
+	transition: 0.5s all; /*velocidade de transição do elemento, do normal para as características descritas na class*/
 	cursor: pointer; /*transforma cursor na mãozinha*/
 }
 
@@ -140,11 +140,24 @@ margin: 20px 0;
 	transform: scale(1.2); /*propridade que aumenta a proporção do item quando clicado, em decimal nesse caso aumenta em 20%*/
 }
 
+table {
+    margin: 20px 0 40px;
+}
 
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
 
 
 /*
----------------PRECEDÊNCIA  DE SELETORES, IDENTIFICADORES, CLASSES E INLINE----------------
+//////////////// PRECEDÊNCIA  DE SELETORES, IDENTIFICADORES, CLASSES E INLINE ////////////////////
 Quanto mais específica for a seleção, mais prioridade ela terá: 
 Exemplo d equal cor será aplicada à tag parágrafo, se acordo com sua declaração: ;
 [FORÇA 1 TAG] - A cor aplicada na tag <p> será o vermelho
@@ -181,4 +194,17 @@ específico e tem amior precedência.
 /*
 ***************INPUTS PARA CELULAR************************
 email, tel, number, password, date, datetime, month e search
-Esses inputs ajudam na navegabilidade em dispositivos móveis*/
+Esses inputs ajudam na navegabilidade em dispositivos móveis
+
+///////////////////// TABELAS  ///////////////////////////
+
+Toda tabela deverá estar dentro da tag <table>
+<thead> - a linha de cabelho da tabela deve estar em thead
+<th> - é a tag da linha de caebçalho, em vez de tr
+<tbody> todo o corpo da tabela, as tags td e tr
+<tr> - table row (quantidade de linhas de uma tabela)
+<td> - table data (quantidade de células de uma linha)
+<tfoot> o rodapé da tabela.
+*colsoan - agrupa as células de uma tabela em x vezes. e.g. <td colspan = "5">Rio de Janeiro </td>
+
+*/
