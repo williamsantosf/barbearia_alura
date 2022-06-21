@@ -105,7 +105,7 @@ form { /*margem do formulário todo (para desgrudar ele do header e do rodapé*/
 	margin: 40px 0; 
 }
 
-form label, legend { 
+form label, legend { /*alterada a tag de p para legend*/
 	display: block; /*os elementos do form são in line por padrão, ajustar para block para ficar um em cada linha*/
 	font-size: 20px;
 	margin: 0 0 10px ; /*margens das etiquetas para desgrudar da caixa de inpur*/
@@ -156,3 +156,8 @@ específico e tem amior precedência.
 	<p style="color: green" (no elemento HTML)
 ********************************************************************************************
 */
+
+/*
+***************INPUTS PARA CELULAR************************
+email, tel, number, password, date, datetime, month e search
+Esses inputs ajudam na navegabilidade em dispositivos móveis*/
