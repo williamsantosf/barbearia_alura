@@ -387,5 +387,36 @@ Podemos também, fazer um gradiente circular, nesse caso não existe grau de inc
 	padding: 3em 0;
     background: radial-gradient(orange 50%, blue, red, black);
 
+/////////////////  SELETORES AVANÇADOS  /////////////////////////
 
+Seletor " > ": acessa os filhos de qualquer elemento.
+No exemplo, axessamos todos os filhos diretos da tag <main>
+	  man > p {
+		brackground: blue;
+	 }
+
+ Seletor " + " : acessa o primeiro irmão de determinado elemento.
+ Abaixo, acessamos o PRIMEIRO p após uma imagem.
+	 img + p {
+		background:  green
+	 }
+
+ Seletor " ~ ": acessa todos os irmão de determinado elemento.
+ Nesse caso, vamos acessar todos os p após uma imagem: 
+	 img ~ p {
+		background:  yellow;
+	 }
+
+ Seletor "not": apar acessar todos os elementos exceto algum.
+ Por exemplo, vamos acessar todos os identificadores, exceto o #missao
+ 	main p: not(#missao){
+		background:  purple;
+ 	}
+
+////////////////// CALCULS EM CSS //////////////////////
+
+Quando precisamos elaborar layouts adaptáveis: 
+
+	width: calc((100% / 3) - 10px);
+Nesse caso, estamos calculando um width que deva ser um terço DO ELEMENTO PAI, subtraindo 10px
 */
