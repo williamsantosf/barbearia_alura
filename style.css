@@ -270,6 +270,25 @@ quando queremos manipular comportamento, trabalhamos com identificadores*/
     margin: 2em auto;
 }
 
+
+@media screen and (max-width: 480px){
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+	nav {
+		position: static;
+	}
+	.lista-beneficios, .imagem-beneficios {
+		width: 100%;
+	}
+}
+
+
+
 /*
 //////////////// PRECEDÊNCIA  DE SELETORES, IDENTIFICADORES, CLASSES E INLINE ////////////////////
 Quanto mais específica for a seleção, mais prioridade ela terá: 
@@ -464,6 +483,28 @@ opacidade de 30%, representado na camada alfa (0,0,0,0.3)
     margin: 0 0 1em;
     clear: left; 
     color:  rgba(0,0,0,0.3);
+
+///////////////////// RESPONSIVIDADE EM DISPOSITIVOS MOVEIS /////////////////////////////////////////
+
+
+@media screen and (max-width: 480px) {        para telas até 480px, aplicar as properties abaixo
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    } larhura automática para todas as classes supra citadas
+
+    h1 {                     alinha ao centro o texto do h1 (que é a logo)
+        text-align: center;
+    }
+
+    nav { deixa a posição do menu estática, ou seja, logo abaixo da logo
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%; coloca as duas classes acima para ocupar 100% da largura do dispositivo
+    }
+}
+
 
 */
 
