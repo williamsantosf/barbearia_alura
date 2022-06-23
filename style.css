@@ -159,7 +159,8 @@ td, th {
     padding: 8px 15px;
 }
 
-/*ESTILO CSS DA PÁGINA INICIAL*/
+/*____________________ESTILO CSS DA PÁGINA INICIAL_________________________________________________*/
+
 /*Consideração:  quando queremos manipular estilo, trabalhamos com classes,
 quando queremos manipular comportamento, trabalhamos com identificadores*/
 
@@ -229,8 +230,15 @@ quando queremos manipular comportamento, trabalhamos com identificadores*/
     content: "★";
 }
 
-.imagembeneficios {
+.imagem-beneficios {
     width: 60%;
+    opacity: 1; /*valor que varia de 0 a 1, onde 0 não vemos nada, e 1 veos o elemento inteiro*/
+    transition: 400ms; /*velocidade de transição*/
+    box-shadow: 10px 10px 10px 0 #000000; /*sombra atras do elemento (vide anotações) */
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.3;
 }
 
 .mapa {
@@ -419,4 +427,43 @@ Quando precisamos elaborar layouts adaptáveis:
 
 	width: calc((100% / 3) - 10px);
 Nesse caso, estamos calculando um width que deva ser um terço DO ELEMENTO PAI, subtraindo 10px
+
+
+
+
+
+/////////////////// OPACIDADE DE ELEMENTOS e SOMBRA //////////////////////////////////
+
+A opacidade é o valor que varia de 0 a 1, onde 0 não vemos nada, e 1 veos o elemento inteiro
+As propriedades do box-shadow são: eixo x, eixo y, blur (grau espalhamento) e intensidade da borda (como se fosse a proximidade da luz sobre o elemento)
+Podemos adicionar várias sombras ao mesmo elemento, seperando por  vírgula.
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1; (vendo o elemento inteiro)
+    transition: 400ms; 
+    box-shadow: 10px 10px 10px 0 #000000; 
+}
+
+
+Abaixo, temos o efeito que altera a propriedade opacity para 30%, quando o mouse está por cima.
+
+.imagem-beneficios:hover {
+    opacity: 0.3;
+
+
+CAMADA ALFA EM RGB
+
+Abaixo, aplicamos a propriedade rgba, que contéma  camada alfa, que é o grau de opacidade do elemento.
+Desse modo, deixamos o título principal na cor preta, representada em rgb por três zeros, e maos o grau de 
+opacidade de 30%, representado na camada alfa (0,0,0,0.3)
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em; 
+    margin: 0 0 1em;
+    clear: left; 
+    color:  rgba(0,0,0,0.3);
+
 */
+
