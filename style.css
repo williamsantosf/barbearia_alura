@@ -101,12 +101,12 @@ footer {
 	font-size: 13px;
 }
 
-main { 
-	/*removido estlido do main, para que possamos manipular os elementos contidos nele*/
-}
+/*main { 
+	removido estlido do main, para que possamos manipular os elementos contidos nele
+}*/
 
 form { /*margem do formulário todo (para desgrudar ele do header e do rodapé*/
-	margin: 40px 0; 
+	margin: 40px 50px; 
 }
 
 form label, legend { /*alterada a tag de p para legend*/
@@ -144,8 +144,13 @@ margin: 20px 0;
 	transform: scale(1.2); /*propridade que aumenta a proporção do item quando clicado, em decimal nesse caso aumenta em 20%*/
 }
 
+.selecao {
+	font-size: 20px;
+
+}
+
 table {
-    margin: 20px 0 40px;
+    margin: 20px 500px 40px;
 }
 
 thead {
@@ -271,20 +276,47 @@ quando queremos manipular comportamento, trabalhamos com identificadores*/
 }
 
 
-@media screen and (max-width: 480px){
-	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
-		width: auto;
+@media screen and (max-width: 480px){ /*anotação para aplicação de estilos em telas de tamnho máximo de 480px*/
+	/*listamos os elementos os quais queremos ajustar à tela mobile*/
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .produtos {
+		width: auto; /*aqui, ajustamos para automático a largura de todos esses elementos*/
 	}
 
-	h1 {
+	h1 { /*Aqui, centralizamos todo texto de h1*/
 		text-align: center;
 	}
-	nav {
+	nav { /*ajustamoas a posição do menu de navegação para estática*/
 		position: static;
 	}
 	.lista-beneficios, .imagem-beneficios {
-		width: 100%;
+		width: 100%; /*A imagem e lista de beneficios passam a ocupar 100% da tela, ficamdo uma abaixo da outra*/
 	}
+
+	.enviar { /*O botão enviar terá a largura de 230px e uma margem esquerda de 20, para ficar mais au centro*/
+		width: 230px;
+		margin-left: 20px;
+	}
+
+	.input-padrao { /*borda de 3px e largura de 80% da tela para todos os campos do formulário*/
+        border-width: 3px;
+        width: 80%;
+        
+    }
+
+    fieldset { /*margem para todos os fieldsets do formulário*/
+        margin: 20px 0 30px 0;
+    }
+
+    table { /*tabela com margens acima e abaico de 20px e automático nas laterais*/
+        margin: 20px auto;
+    }    
+
+    .produtos li {
+        display: block; /*para colocar os produtos abaixo um do outro*/
+        width: auto; /*larhura automárica do card*/
+        margin: 10px 30px; /*margens que separam os produtos*/
+    }    
+
 }
 
 

@@ -2,9 +2,11 @@
 <html>
 	<head><!--informações a serem passadas ao navegador-->
 		<meta charset="UTF-8"><!--dicionário da página-->
+		<meta name="viewport" content="width=device-width">
 		<title>Contato - Barbearia Alura</title><!--título da aba do navegador-->
 		<link rel="stylesheet" href="reset.css"> <!--reseta as configurações padrões do navegador, carregada antes do CSS-->
 		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<header>
@@ -19,8 +21,8 @@
 				</nav>
 			</div>
 		</header>
-		<main>
-			<form> <!--Tag para início do formulário-->
+		<main class="principal-contato">
+			<form class="formulario"> <!--Tag para início do formulário-->
 				<label for="nomesobrenome">Nome e Sobrenome</label><!--Etiqueta do campo do formulário-->
 				<input type="text" id="nomesobrenome" class="input-padrao" required><!--Toda label tem que vir acompanhada de um input, que deve ter tipo e um id (que será a ligação com o back end)-->
 
@@ -36,7 +38,7 @@
 				<fieldset> <!--Criamos uma div para envelopar todo o formulário-->
 					<legend>Como prefere nosso contato?</legend><!--dentro de fieldset, utilizamos a tag legend, em vez da tag p-->
 					<label for="radio-email"><input type="radio" value="radio-email" id="radio-email"  name="contato">
-					<!--tipo radio, id deve ser igual ao for para eles se conversarem, name para agrupar os radios (para permitir que somente um seja marcado-->E-mail</label>
+					<!--tipo radio, id deve ser igual ao "for" para eles se conversarem, name para agrupar os radios (para permitir que somente um seja marcado-->E-mail</label>
 					
 					<label for="radio-telefone"><input type="radio" value="telefone" id="radio-telefone" name="contato">Telefone</label>
 					
@@ -44,7 +46,7 @@
 				</fieldset>
 				<fieldset>
 				<legend>Qual horário prefere ser atendido?</legend>
-				<select>
+				<select class="selecao">
 					<option>Manhã</option>
 					<option>Tarde</option>
 					<option>Noite</option>
@@ -55,7 +57,7 @@
 
 				<input type="submit" value="Enviar Formulário" class="enviar"><!--Para envio de formulário, não necessita de label-->
 			</form>
-			<table>
+			<table class="tabela">
 			    <thead>
 			        <tr>
 			            <th>Dia</th>
