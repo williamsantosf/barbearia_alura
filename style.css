@@ -141,7 +141,7 @@ margin: 20px 0;
 
 .enviar:hover {
 	background: red;
-	transform: scale(1.2); /*propridade que aumenta a proporção do item quando clicado, em decimal nesse caso aumenta em 20%*/
+	transform: scale(1.1); /*propridade que aumenta a proporção do item quando clicado, em decimal nesse caso aumenta em 20%*/
 }
 
 .selecao {
